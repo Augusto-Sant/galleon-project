@@ -1,0 +1,31 @@
+{% extends "AppGal/base.html" %}
+
+{% block body_block %}
+
+    <div class="jumbotron">
+        <h1>{{user.username}}</h1>
+        <h4>Email: {{user.email}}</h4>
+        <h4>Points: {{user.userprofile.profile_points}}</h4>
+    </div>
+    <div class="jumbotron">
+        <h2>Your voyages:</h2>
+        <br>
+        {% if user.userprofile.portugal == True %}
+            <h2>Portugal</h2>
+        {% endif %}
+        {% if user.userprofile.andalusia == True %}
+            <h2>Andalusia</h2>
+        {% endif %}
+        {% if user.userprofile.nubia == True %}
+            <h2>Nubia</h2>
+        {% endif %}
+        {% if user.userprofile.england == True %}
+            <h2>England</h2>
+        {% endif %}
+        {% if user.userprofile.brazil == True %}
+            <h2>Brazil</h2>
+        {% endif %}
+    </div>
+    
+
+{% endblock %}

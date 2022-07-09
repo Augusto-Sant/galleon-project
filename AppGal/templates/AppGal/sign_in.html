@@ -1,0 +1,16 @@
+{% extends "AppGal/base.html" %}
+
+{% block body_block %}
+<!-- FORM PARA REGISTRAR CONTA         --> 
+<div class="background_signin p-5 rounded-lg m-3">
+    {% if registered %}
+        <h1>Thanks for registering!</h1>
+    {% else %}
+        <form method="POST">
+            {{form.as_p}}
+            {% csrf_token %}
+            <input type="submit" class="btn btn-primary" value="Sign In">
+        </form>
+    {% endif %}
+</div>
+{% endblock %}

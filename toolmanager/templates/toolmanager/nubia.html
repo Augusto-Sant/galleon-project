@@ -1,0 +1,15 @@
+{% extends "toolmanager/voyage_base.html" %}
+
+{% block body_block %}
+    <div class="nu_back rounded">
+        <h3>NUBIA</h3>
+        <h1>Questions:</h1>
+        <br>
+        <div class="question_area rounded">
+            <form method="POST">
+                {{form.as_p}}
+                {% csrf_token %}
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </form>
+        </div>
+{% endblock %}

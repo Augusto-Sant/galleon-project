@@ -1,0 +1,40 @@
+/* imported font */
+.newfont{
+    font-family: 'Amita', cursive;
+    font-size: large;
+    margin-top: 5px;
+}
+
+ul{
+    list-style-type: none;
+}
+
+body{
+    background-color: #7A8187;
+}
+
+p{
+    background-color: #c0d0d0;
+}
+
+.pt_back{
+    background-color: rgb(17, 97, 177);
+}
+.an_back{
+    background-color: rgb(22, 150, 107);
+}
+.br_back{
+    background-color: gold;
+}
+.en_back{
+    background-color: brown;
+}
+.nu_back{
+    background-color: rgb(141, 104, 58);
+}
+.choice{
+    margin-top: 4px;
+}
+.question_area{
+    background-color: #abbaba;
+}

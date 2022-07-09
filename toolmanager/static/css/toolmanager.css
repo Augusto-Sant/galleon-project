@@ -1,0 +1,28 @@
+.tool_header{
+    background-color: #c0d0d0;
+}
+.container{
+    margin-top: 2rem;
+}
+/* VOYAGES-- */
+.pt{
+    background-color: rgb(17, 97, 177);
+}
+.an{
+    background-color: rgb(22, 150, 107);
+}
+.nu{
+    background-color: rgb(141, 104, 58);
+}
+.en{
+    background-color: brown;
+}
+.br{
+    background-color: gold;
+}
+.back{
+    background: url("/static/img/world-map.jpg") 40% 0 no-repeat fixed;
+    height: 1000px;
+    padding: 50px 0 0 0;  
+    border: 10px solid #63686d;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+{% extends "AppGal/base.html" %}
+{% load static %}
+{% block body_block %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'css/toolmanager.css' %}">
+    <title>tool</title>
+</head>
+<body>
+    <div class="back row row-cols-1 row-cols-md-3 mb-3 bg-darken text-center">
+    <!-- andalusia -->
+    <div class="andalusia-card container text-center">
+        <div class="newfont container">
+            <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="an tool_header card-header py-3">
+                <img src="{% static 'icons/alhambra.png'%}" width="30" height="30" class="d-inline-block" alt="">
+                <h4 class="my-0 fw-normal">Andalusia</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                <li>Closer to Portugal Andalusia is similar in some aspects and their history is very much linked and a voyage there seems obvious.</li>
+            </ul>
+            {% if user.userprofile.andalusia == False %}
+                <h3>10<small class="text-muted fw-light">/points</small></h3>
+                <!-- buy -->
+                <form action="{% url 'toolmanager:tool_buy' %}" method="POST">
+                    {% csrf_token %}
+                    <input type="submit" value="BUY" class="btn btn-primary" name="andalusia_form">
+                </form>
+            {% else %}
+                <a class="btn btn-outline-primary" href="{% url 'toolmanager:andalusia_view' %}">Voyage!</a>
+            {% endif %}
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- portugal -->
+    <div class="entire-card container text-center">
+        <div class="newfont container">
+            <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="pt tool_header card-header py-3">
+                <img src="{% static 'icons/portugal-cross.png'%}" width="30" height="30" class="d-inline-block" alt="">
+                <h4 class="my-0 fw-normal">Portugal</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                <li>Here is where the voyage starts, the country that was once known for its naval power.</li>
+                </ul>
+                {% if user.userprofile.portugal == False %}
+                    <h3>5<small class="text-muted fw-light">/points</small></h3>
+                    <!-- buy -->
+                    <form action="{% url 'toolmanager:tool_buy' %}" method="POST">
+                        {% csrf_token %}
+                        <input type="submit" value="BUY" class="btn btn-primary" name="portugal_form">
+                    </form>
+                {% else %}
+                    <a class="btn btn-outline-primary" href="{% url 'toolmanager:portugal_view' %}">Voyage!</a>
+                {% endif %}
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- nubia -->
+    <div class="nubia-card container text-center">
+        <div class="newfont container">
+            <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="nu tool_header card-header py-3">
+                <img src="{% static 'icons/abu-simbel.png'%}" width="30" height="30" class="d-inline-block" alt="">
+                <h4 class="my-0 fw-normal">Nubia</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                <li>A mysterious culture with a long history, who knows what one may find in the ancient desert.</li>
+                </ul>
+                {% if user.userprofile.nubia == False %}
+                    <h3>15<small class="text-muted fw-light">/points</small></h3>
+                    <!-- buy -->
+                    <form action="{% url 'toolmanager:tool_buy' %}" method="POST">
+                        {% csrf_token %}
+                        <input type="submit" value="BUY" class="btn btn-primary" name="nubia_form">
+                    </form>
+                {% else %}
+                    <a class="btn btn-outline-primary" href="{% url 'toolmanager:nubia_view' %}">Voyage!</a>
+                {% endif %}
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- england -->
+    <div class="england-card container text-center">
+        <div class="newfont container">
+            <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="en tool_header card-header py-3">
+                <img src="{% static 'icons/england.png'%}" width="30" height="30" class="d-inline-block" alt="">
+                <h4 class="my-0 fw-normal">England</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                <li>a powerful country that can maybe rival Portugal in its naval power, maybe a voyage there is necessary for acquiring a better grasp at all things naval.</li>
+                </ul>
+                {% if user.userprofile.england == False %}
+                    <h3>20<small class="text-muted fw-light">/points</small></h3>
+                    <!-- buy -->
+                    <form action="{% url 'toolmanager:tool_buy' %}" method="POST">
+                        {% csrf_token %}
+                        <input type="submit" value="BUY" class="btn btn-primary" name="england_form">
+                    </form>
+                {% else %}
+                    <a class="btn btn-outline-primary" href="{% url 'toolmanager:england_view' %}">Voyage!</a>
+                {% endif %}
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- brazil -->
+    <div class="brazil-card container text-center">
+        <div class="newfont container">
+            <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="br tool_header card-header py-3">
+                <img src="{% static 'icons/brasil.png'%}" width="30" height="30" class="d-inline-block" alt="">
+                <h4 class="my-0 fw-normal">Brazil</h4>
+            </div>
+            <div class="card-body">
+                <ul class="list-unstyled mt-3 mb-4">
+                <li>A tropical paradise that is the home of many unknown adventures, the last trip is to a country that in the end may even become our home</li>
+                </ul>
+                {% if user.userprofile.brazil == False %}
+                    <h3>25<small class="text-muted fw-light">/points</small></h3>
+                    <!-- buy -->
+                    <form action="{% url 'toolmanager:tool_buy' %}" method="POST">
+                        {% csrf_token %}
+                        <input type="submit" value="BUY" class="btn btn-primary" name="brazil_form">
+                    </form>
+                {% else %}
+                    <a class="btn btn-outline-primary" href="{% url 'toolmanager:brazil_view' %}">Voyage!</a>
+                {% endif %}
+            </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+{% endblock %}
