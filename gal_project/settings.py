@@ -14,7 +14,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-TEMPLATE_DIR = BASE_DIR/"AppGal/templates/AppGal" # ALL NEW TEMPLATES
+TEMPLATE_DIR = BASE_DIR/"accounts/templates/accounts" # ALL NEW TEMPLATES
 STATIC_DIR = BASE_DIR/"static"
 MEDIA_DIR = BASE_DIR/"media"
 
@@ -23,10 +23,10 @@ MEDIA_DIR = BASE_DIR/"media"
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = #secret key here
+SECRET_KEY = 'django-insecure-*$6#k3&b+nrjxo0lyxtb&=2t&9oh9n&95e@e0#3i1@c%z#t^_*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',#NEW APPS HERE
-    'AppGal',
+    'accounts',
     'toolmanager',
 ]
 
@@ -135,7 +135,7 @@ STATIC_URL = 'static/'
 MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 #login
-LOGIN_URL = '/AppGal/user_login'
+LOGIN_URL = '/accounts/user_login'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

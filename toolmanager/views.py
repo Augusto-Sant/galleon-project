@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from . import models
 from django.contrib.auth.decorators import login_required
-from AppGal.models import UserProfile
+from accounts.models import UserProfile
 #TOOLMANAGER VIEWS/VOYAGES  --
 from django.contrib.auth import get_user_model
 User = get_user_model()
@@ -12,14 +12,15 @@ from toolmanager import forms
 #INDEX PRINCIPAL --
 #Tools--
 def tools_index(request):
+    """Returns index html of toolmanager"""
     tool_list = models.Tool.objects.order_by("price")
     context = {'tool_list': tool_list}
 
     return render(request, 'toolmanager/index.html', context)
 
-#Buy of VOYAGES mechanic reduce works now but no mechanic--
 @login_required
 def tool_buy(request):
+    """Buy and subtract points from user."""
     if request.method == "POST":
         user = UserProfile.objects.get(user_id=request.user.id)
         
@@ -53,6 +54,7 @@ def tool_buy(request):
 
 #Voyages/Quiz ---
 def portugal_quiz_view(request):
+    """returns Portugal quiz html"""
     if request.method == "POST":
         form = forms.pt_quiz(request.POST)
         if form.is_valid():
@@ -80,6 +82,7 @@ def portugal_quiz_view(request):
     return render(request,"toolmanager/portugal.html",{'form':form})
 
 def andalusia_quiz_view(request):
+    """returns Andalusia quiz html"""
     if request.method == "POST":
         form = forms.an_quiz(request.POST)
         if form.is_valid():
@@ -107,6 +110,7 @@ def andalusia_quiz_view(request):
     return render(request,"toolmanager/andalusia.html",{'form':form})
 
 def nubia_quiz_view(request):
+    """returns Nubia quiz html"""
     if request.method == "POST":
         form = forms.nu_quiz(request.POST)
         if form.is_valid():
@@ -134,6 +138,7 @@ def nubia_quiz_view(request):
     return render(request,"toolmanager/nubia.html",{'form':form})
 
 def england_quiz_view(request):
+    """returns England quiz html"""
     if request.method == "POST":
         form = forms.en_quiz(request.POST)
         if form.is_valid():
@@ -161,6 +166,7 @@ def england_quiz_view(request):
     return render(request,"toolmanager/england.html",{'form':form})
 
 def brazil_quiz_view(request):
+    """returns Brazil quiz html"""
     if request.method == "POST":
         form = forms.br_quiz(request.POST)
         if form.is_valid():

@@ -5,7 +5,7 @@ from django.core import validators
 #ALL QUIZZES HERE
 
 class pt_quiz(forms.Form):
-    #PORTUGAL
+    """Portugal Quiz Form"""
     #in choices (value,label), label = title of question
     CHOICES_1 = [("A1","Discovered a sea route to India"),("A2","Discovered Brazil"),("A3","Great commander in the Reconquista"),]
     answer_1 = forms.ChoiceField(choices=CHOICES_1, widget=forms.RadioSelect,label="1. What is Vasco da Gama known for?")
@@ -17,7 +17,7 @@ class pt_quiz(forms.Form):
     answer_3 = forms.ChoiceField(choices=CHOICES_3, widget=forms.RadioSelect,label="3. What originated the name Portugal?")
 
 class an_quiz(forms.Form):
-    #ANDALUSIA
+    """Andalusia Quiz Form"""
     #in choices (value,label), label = title of question
     CHOICES_1 = [("A1","Islam"),("A2","Christianity"),("A3","Judaism"),]
     answer_1 = forms.ChoiceField(choices=CHOICES_1, widget=forms.RadioSelect,label="1. What was the religion of the rulers in Al-Andalus?/Andalusia")
@@ -29,7 +29,7 @@ class an_quiz(forms.Form):
     answer_3 = forms.ChoiceField(choices=CHOICES_3, widget=forms.RadioSelect,label="3. Last muslim emirate in hispania?")
 
 class nu_quiz(forms.Form):
-    #NUBIA
+    """Nubia Quiz Form"""
     #in choices (value,label), label = title of question
     CHOICES_1 = [("A1","Ghana"),("A2","Morroco"),("A3","Egypt"),]
     answer_1 = forms.ChoiceField(choices=CHOICES_1, widget=forms.RadioSelect,label="1. Which country Nubia was connected with and sometimes ruled?")
@@ -41,7 +41,7 @@ class nu_quiz(forms.Form):
     answer_3 = forms.ChoiceField(choices=CHOICES_3, widget=forms.RadioSelect,label="3. Most famous nubian Pharaoh?")
 
 class en_quiz(forms.Form):
-    #ENGLAND
+    """England Quiz Form"""
     #in choices (value,label), label = title of question
     CHOICES_1 = [("A1","Anglo-Saxon/Norman/Britons"),("A2","Swedish/German/Britons"),("A3","Romans/Polish/Britons"),]
     answer_1 = forms.ChoiceField(choices=CHOICES_1, widget=forms.RadioSelect,label="1. What were the main cultures that made the English?")
@@ -53,7 +53,7 @@ class en_quiz(forms.Form):
     answer_3 = forms.ChoiceField(choices=CHOICES_3, widget=forms.RadioSelect,label="3. Who won the famous Battle of Hastings?")
 
 class br_quiz(forms.Form):
-    #BRAZIL
+    """Brazil Quiz Form"""
     #in choices (value,label), label = title of question
     CHOICES_1 = [("A1","Gold/Sky/Rivers/Forests"),("A2","Amazon/Ocean/Portugal"),("A3","Peace/Faith/Honor"),]
     answer_1 = forms.ChoiceField(choices=CHOICES_1, widget=forms.RadioSelect,label="1. What the colors of brazil flag stand for now?")

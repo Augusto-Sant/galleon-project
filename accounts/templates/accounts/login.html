@@ -1,0 +1,18 @@
+{% extends 'accounts/base.html' %}
+{% block body_block %}
+  <div class="background_login p-5 rounded-lg m-3">
+    <h1>Please Login</h1>
+
+        <form method="post" action="{% url 'accounts:user_login' %}">
+          {% csrf_token %}
+          <label class="form-label" for="username">Username:</label>
+          <input class="form-control" type="text" name="username" placeholder="Username">
+          <p></p>
+          <label class="form-label" for="password">Password:</label>
+          <input class="form-control" type="password" name="password">
+          <p></p>
+          <input class="btn btn-primary" type="submit" name="" value="Login">
+
+        </form>
+  </div>  
+{% endblock %}
