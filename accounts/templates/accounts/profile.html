@@ -3,28 +3,31 @@
 {% block body_block %}
 
     <div class="jumbotron">
-        <h1>{{user.username}}</h1>
-        <h4>Email: {{user.email}}</h4>
-        <h4>Points: {{user.userprofile.profile_points}}</h4>
-    </div>
-    <div class="jumbotron">
-        <h2>Your voyages:</h2>
+        <h1 class="newfont fs-1">{{profile.user.username}}</h1>
+        <h4>Email: {{profile.user.email}}</h4>
+        <h4>Points: {{profile.profile_points}}</h4>
+        <p class="border-bottom border-dark"></p>
         <br>
-        {% if user.userprofile.portugal == True %}
-            <h2>Portugal</h2>
-        {% endif %}
-        {% if user.userprofile.andalusia == True %}
-            <h2>Andalusia</h2>
-        {% endif %}
-        {% if user.userprofile.nubia == True %}
-            <h2>Nubia</h2>
-        {% endif %}
-        {% if user.userprofile.england == True %}
-            <h2>England</h2>
-        {% endif %}
-        {% if user.userprofile.brazil == True %}
-            <h2>Brazil</h2>
-        {% endif %}
+        <details>
+            <summary>Voyages:</summary>
+            <p></p>
+            <br>
+            {% if profile.portugal == True %}
+                <h4 class="border-bottom border-dark">Portugal</h4>
+            {% endif %}
+            {% if profile.andalusia == True %}
+                <h4 class="border-bottom border-dark">Andalusia</h4>
+            {% endif %}
+            {% if profile.nubia == True %}
+                <h4 class="border-bottom border-dark">Nubia</h4>
+            {% endif %}
+            {% if profile.england == True %}
+                <h4 class="border-bottom border-dark">England</h4>
+            {% endif %}
+            {% if profile.brazil == True %}
+                <h4 class="border-bottom border-dark">Brazil</h4>
+            {% endif %}
+        </details>
     </div>
     
 

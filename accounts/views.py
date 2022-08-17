@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.views.generic import View,TemplateView
 #accounts APPS ARE ALL THINGS RELATED TO ACCOUNT/LOGIN/SIGN UP
+from . import models
 
 #HOME PRINCIPAL --
 class IndexView(TemplateView):
@@ -19,9 +20,16 @@ class AboutView(TemplateView):
     template_name = 'accounts/about.html'
 
 #PROFILE --
-class ProfileView(TemplateView):
-    """Profile template view in accounts"""
-    template_name = 'accounts/profile.html'
+def all_profiles_view(request):
+    """Return all profiles registered in site ordered by points"""
+    profiles_list = models.UserProfile.objects.order_by('-profile_points')[:10]
+    return render(request,'accounts/profile_scoreboard.html',{"all_users":profiles_list})
+
+def profile_view(request,user_profile_id):
+    """returns profile.html with a profile context"""
+    profiles_list = models.UserProfile.objects.order_by('id')
+    profile = profiles_list[user_profile_id-1]
+    return render(request,'accounts/profile.html',{"profile":profile})
 
 #LOGIN SYSTEM --
 def login_form_view(request):

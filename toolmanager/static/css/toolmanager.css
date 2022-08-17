@@ -20,9 +20,9 @@
 .br{
     background-color: gold;
 }
-.back{
+.back_ground{
     background: url("/static/img/world-map.jpg") 40% 0 no-repeat fixed;
-    height: 1000px;
-    padding: 50px 0 0 0;  
-    border: 10px solid #63686d;
+    background-size: 100% auto;
+    height: 100px; 
+    width: 100px;
 }

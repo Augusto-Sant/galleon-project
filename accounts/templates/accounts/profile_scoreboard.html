@@ -1,0 +1,16 @@
+{% extends "accounts/base.html" %}
+
+{% block body_block %}
+
+    <div class="jumbotron shadow">
+        <h1 align="center">SCOREBOARD</h1>
+        <br>
+        <ol align="center" class="newfont list-group list-group-numbered">
+            {% for profile in all_users %}
+                <li class="nav-text list-group-item"><a class="link-secondary" href="{{profile.user.id|add:'-1'}}">{{profile.user.username}}</a></li>
+                <li><p>🪙 {{profile.profile_points}}</p></li>
+            {% endfor %}
+        </ol>
+    </div>
+
+{% endblock %}
