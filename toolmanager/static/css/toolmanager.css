@@ -22,7 +22,6 @@
 }
 .back_ground{
     background: url("/static/img/world-map.jpg") 40% 0 no-repeat fixed;
-    background-size: 100% auto;
-    height: 100px; 
-    width: 100px;
+    border: solid #c0d0d0 10px;
+    border-radius: 5px;
 }
