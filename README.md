@@ -1,15 +1,27 @@
 <h1 align="center">Galleon Project</h1>
 
-![Antique](https://user-images.githubusercontent.com/100100069/178118306-ff274b32-d1f3-4748-af6a-9bfeb475f065.png)
+![other_worldimage2](https://user-images.githubusercontent.com/100100069/186015081-0f50efed-1e99-422a-8646-e18021824a6e.png)
 
 <p>Hello my name is José Augusto, I'm a student from Brazil.</p>
 <p>This website is themed around voyages around the world with a point-like system to buy them, each voyage is a quiz about the specific culture, 
     and I wanted to do it like that to experiment with creating different forms and models for my learning and also how they would be used in Django.</p>
 
+# Profile
+
+![other_worldimage1](https://user-images.githubusercontent.com/100100069/186016104-3d4b8bd7-19d4-4b03-856a-ee2f47e93a8a.png)
+
+<p>Profiles have symbols like this anchor to show growth based on a rank of points, profile also shows the voyages acquired.</p>
+
+# Scoreboard
+
+![other_worldimage1](https://user-images.githubusercontent.com/100100069/186016696-ca87f880-eca3-4fbe-a2be-746f74437a84.png)
+
 # Features
 - [x] Authentication system
 - [x] Points Mechanics
 - [x] Quiz Mechanics
+- [x] Profile and Marketplace.
+- [x] Scoreboard of profiles based on points
 - [ ] Deployment
 
 # Information
