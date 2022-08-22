@@ -54,23 +54,6 @@ def tool_buy(request):
     return render(request, "toolmanager/index.html", {})
 
 #Voyages/Quiz ---
-    #         answer_2 = form.cleaned_data['answer_2']
-    #         answer_3 = form.cleaned_data['answer_3']
-    #         user = UserProfile.objects.get(user_id=request.user.id)
-            
-    #         #check answers
-    #         points_gained = 0
-    #         if answer_1 == "A1":
-    #             points_gained += 5
-            
-    #         if answer_2 == "A2":
-    #             points_gained += 5
-            
-    #         if answer_3 == "A1":
-    #             points_gained += 5
-            
-    #         user.add_points(points_gained)
-    #         return render(request,"toolmanager/answer_portugal.html",{'points_gained':points_gained})
 def quiz_view(request,quiz_num):
     """returns quiz form html or answer html"""
     if quiz_num == 0:

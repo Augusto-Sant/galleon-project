@@ -48,7 +48,9 @@
 }
 /* product boxes, layout of each product in commerce*/
 .product_box {
-    background-color: #F0F4FC;
+    background-color: #c0d0d0;
+    border: solid #c0d0d0 0px;
+    border-radius: 10px;
 }
 /* about page */
 .about{

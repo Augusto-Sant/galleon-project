@@ -1,8 +1,15 @@
 {% extends "accounts/base.html" %}
-
+{% load static %}
 {% block body_block %}
 
-    <div class="jumbotron">
+    <div class="jumbotron" align="center">
+        {% if profile.profile_points > 400 %}
+            <img src="{% static 'icons/profile3.png' %}" alt="">
+        {% elif profile.profile_points > 200 %}
+            <img src="{% static 'icons/profile2.png' %}" alt="">
+        {% else %}
+            <img src="{% static 'icons/profile1.png' %}" alt="">
+        {% endif %}
         <h1 class="newfont fs-1">{{profile.user.username}}</h1>
         <h4>Email: {{profile.user.email}}</h4>
         <h4>Points: {{profile.profile_points}}</h4>
@@ -12,6 +19,9 @@
             <summary>Voyages:</summary>
             <p></p>
             <br>
+            {% if profile.img_collection_1 == True %}
+                <h4 class="border-bottom border-dark">Collection 1</h4>
+            {% endif %}
             {% if profile.portugal == True %}
                 <h4 class="border-bottom border-dark">Portugal</h4>
             {% endif %}

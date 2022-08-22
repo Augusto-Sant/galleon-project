@@ -8,7 +8,9 @@ class UserProfile(models.Model):
     """Substitutes default user of django and add new attributes to check."""
     user = models.OneToOneField(User,on_delete=models.CASCADE)#uses user created by django
     profile_points = models.PositiveIntegerField(default=80)
-    
+    #marketplace
+    img_collection_1 = models.BooleanField(default=False,verbose_name="img_collection_1")
+    img_collection_2 = models.BooleanField(default=False,verbose_name="img_collection_2")
     #voyages
     portugal = models.BooleanField(default=False,verbose_name="portugal")
     andalusia = models.BooleanField(default=False,verbose_name="andalusia")

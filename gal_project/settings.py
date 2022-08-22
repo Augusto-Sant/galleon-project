@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',#NEW APPS HERE
     'accounts',
     'toolmanager',
+    'marketplace',
 ]
 
 MIDDLEWARE = [

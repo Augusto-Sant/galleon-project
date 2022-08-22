@@ -27,6 +27,7 @@
                 <li><a class="button1 btn btn-simple" href="{% url 'accounts:about_view' %}">About</a></li>
               {% if user.is_authenticated %}
                 <li><a class="button1 btn btn-simple" href="{% url 'toolmanager:tool_index' %}">Voyages</a></li>
+                <li><a class="button1 btn btn-simple" href="{% url 'marketplace:marketindex' %}">Marketplace</a></li>
               {% else %}
               {% endif %}
               <li><a class="button1 btn btn-simple" href="{% url 'accounts:all_profiles_view' %}">Scoreboard</a></li>

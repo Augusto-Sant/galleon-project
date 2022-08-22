@@ -23,4 +23,5 @@ urlpatterns = [
     path("",views.IndexView.as_view(),name="index"),#LINK HOME
     path('',include('accounts.urls')),#LINK ALL IN THIS APP
     path('voyages/',include('toolmanager.urls')),#TOOLS=VOYAGES
+    path('marketplace/',include('marketplace.urls'))
 ]

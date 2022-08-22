@@ -1,0 +1,28 @@
+{% extends "accounts/base.html" %}
+{% load static %}
+{% block body_block %}
+    <div class="jumbotron">
+        <h1 class="">MarketPlace</h1>
+    </div>
+    <div class="newfont row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <!-- Collection1 -->
+        <div class="col">
+            <div class="product_box card shadow-sm">
+                  <img class="card-img-top" src="{% static 'img/collection_1.png'%}" width="200" height="250" class="d-inline-block" alt="">
+  
+                  <div class="card-body">
+                  <div class="text-center">
+                    {% if user.userprofile.img_collection_1 == False %}
+                        <h3>10<small class="text-muted fw-light">/points</small></h3>
+                        <form action="{% url 'marketplace:marketbuy' %}" method="POST">
+                            {% csrf_token %}
+                            <input type="submit" value="BUY" class="btn btn-primary" name="buy_collection1">
+                        </form>
+                    {% else %}
+                        <p>You already have.</p>
+                    {% endif %}
+                  </div>
+                  </div>
+              </div>
+        </div>
+{% endblock %}
