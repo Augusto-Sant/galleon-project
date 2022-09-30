@@ -1,3 +1,5 @@
+![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+
 <h1 align="center">Galleon Project</h1>
 
 ![other_worldimage2](https://user-images.githubusercontent.com/100100069/186015081-0f50efed-1e99-422a-8646-e18021824a6e.png)
